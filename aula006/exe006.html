@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(15, 110, 188);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Utilizando o DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JAVASCRIPT</p>
+    <div>Click em min</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write('Esta escrito o seguinte: ' + p1.innerText)
+    </script>
+</body>
+</html>
