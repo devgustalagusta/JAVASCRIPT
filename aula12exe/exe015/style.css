@@ -12,8 +12,14 @@ section{
     padding: 30px;
     margin: auto;
     width: 500px;
-    height: 300px;
     box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.411);
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 16px;
+    
 }
 footer{
     text-align: center;
