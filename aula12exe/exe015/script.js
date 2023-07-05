@@ -6,7 +6,7 @@ function verificar() {
     if (fano.value.length == 0 || Number(fano.value) > ano) {
         window.alert('[ERRO] verifique os dados e tente novamente!')
     } else {
-        var fsex =document.getElementsByName('radsex')
+        var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var gênero = ''
         var img = document.createElement('img')
@@ -28,7 +28,7 @@ function verificar() {
             }
         } else if (fsex[1].checked) {
             gênero = 'uma Mulher'
-            if (idade>=0 && idade < 10) {
+            if (idade >=0 && idade < 10) {
                 // crianca
                 img.setAttribute('src', 'crianca-menina.JPEG')
             } else if (idade < 21) {
