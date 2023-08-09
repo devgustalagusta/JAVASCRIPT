@@ -1,10 +1,12 @@
-const numero1 = prompt('Digite um número:')
-const numero2 = prompt('DIgite outro número:')
-const numeroum = numero1 + '';
-const numerodois = numero2 + '';
-let soma = numeroum + numerodois
-let sub = numeroum - numerodois
-let mult = numeroum * numerodois
-let div = numeroum / numerodois
+const entrada1 = prompt('Digite um número:')
+const entrada2 = prompt('DIgite outro número:')
 
-alert("O valor da soma dos dois números deu: " + soma + " A subtração dos valores deu: " + sub + " A multiplicação dos valores deu: " + mult + " e a divisão dos valores deu: " + div)
+const numero1 = parseFloat(entrada1)
+const numero2 = parseFloat(entrada2)
+
+let soma = numero1 + numero2
+let sub = numero1 - numero2
+let mult = numero1 * numero2
+let div = numero1 / numero2
+
+alert("Resultado:\n" + "A soma dos dois valores deu:" + soma + "\nA subtração dos valores deu: " + sub + "\nA multiplicação dos valores deu: " + mult + "\nA divisão dos valores deu: " + div)
