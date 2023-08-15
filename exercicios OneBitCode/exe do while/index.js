@@ -1,7 +1,7 @@
 let menu = "5"
 
 do {
-    let menu = prompt(
+    menu = prompt(
         "Escolha uma das opções:\n" +
         "1: Primeira opção\n" +
         "2: Segunda opção\n" + 
@@ -13,17 +13,18 @@ do {
         case "1" :
             alert("voce escolheu a opção 1")
             break
-        case "1" :
+        case "2" :
             alert("voce escolheu a opção 2")
             break
-        case "1" :
+        case "3" :
             alert("voce escolheu a opção 3")
             break
-        case "1" :
+        case "4" :
             alert("voce escolheu a opção 4")
             break
-        case "1" :
-            alert("voce escolheu a opção 5")
+        case "5" :
+            alert("voce escolheu encerrar")
+            alert("encerrando...")
             break
         default :
         alert("invalido")
