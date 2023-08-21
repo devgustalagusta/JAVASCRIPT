@@ -1,21 +1,34 @@
-let nomesDaFila = [ "1- Matheus\n","2- Marcus\n", "3- Paulo\n", "4- Caio\n", "5- Isaac\n"]
+let fila = []
+let opcao = ""
 
-let menu = prompt("Opções:\n" + " (1) Novo paciente\n" + " (2) Consultar paciente\n" + " (3) Sair")
+do {
+    let pacientes = ""
+    for ( let i = 0; i < fila.length; i++) {
+        pacientes += (i + 1) + "° - " + fila[i] + "\n"
+    }
 
-if (menu == 1 ) {
-    let nomesFila = nomesDaFila.push(prompt("Qual o nome do novo paciente?"))
-    alert(nomesFila)
-} else if (menu == 2) {
-    consultado = nomesDaFila.shift()
-    alert(consultado + " foi cunsultado.")
-} else if (menu == 3) {
-    alert("Encerrando...")
-}
+    opcao = prompt(
+        "pacientes:\n" + pacientes +
+        "\nEscolha uma ação:\n1. Novo paciente\n2. Consultar paciente\n3. Sair"
+    )
 
-//const lista = nomesDaFila.slice(0,4)
-//alert(lista)
-
-//for (let indice = 1; indice < nomesDaFila.length; indice++) {
- //   const elemento = nomesDaFila[indice]
-//    alert(elemento + " se encontra na posição " + indice)
-//}
+    switch (opcao) {
+        case "1":
+            const novoPaciente = prompt("Qual é o nome do paciênte?")
+            fila.push(novoPaciente)
+            break
+        case "2":
+            const pacienteConsultado = fila.shift()
+            if (pacienteConsultado) {
+                alert(pacienteConsultado + " Foi removido da fila.")
+            } else {
+                alert("Não ha pacientes na fila")
+            }           
+            break
+        case "3":
+            alert("Encerrando.")
+            break
+        default:
+            alert("Opção invalida")
+    }
+} while (opcao !== "3")
