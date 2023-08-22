@@ -53,3 +53,35 @@ for (let indice = 0; indice < sociedade.length; indice++) {
     const elemento = sociedade[indice]
     console.log(elemento + " se encontra na posição " + indice)
 }
+
+// Arrays Bidimencionais
+
+const matriz = [
+    ["l1, c1", "l1, c2", "l1, c3", "l1, c4"],
+    ["l2, c1", "l2, c2", "l2, c3", "l2, c4"],
+    ["l3, c1", "l3, c2", "l3, c3", "l3, c4"],
+]
+
+//console.table(matriz)
+
+//matriz[0].push("Nova coluna")
+//1 1   1'  console.table(matriz)
+
+for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+        const elementu = matriz[i][j]
+        console.log("posição: (" + i + ", " + j + ") valor:" + elementu)
+    }
+}
+
+let pessoa = {}
+
+pessoa.nome = "gustavo"
+pessoa.idade = 20
+pessoa.irmaos = ["Thais", "Thiago", "Thayna"]
+pessoa.enderoco = {
+    rua:"B 255",
+    numero: 255,
+    bairro: "paupina",
+}
+console.log(pessoa)
