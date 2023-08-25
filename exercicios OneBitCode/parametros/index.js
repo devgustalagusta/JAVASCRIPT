@@ -11,3 +11,6 @@ function criarUsuario (nome,email,senha,tipo = "adm") {
         tipo
     }
 }
+
+// RETORNO DE FUNÇÃO
+

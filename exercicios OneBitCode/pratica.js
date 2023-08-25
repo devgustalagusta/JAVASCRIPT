@@ -85,3 +85,48 @@ pessoa.enderoco = {
     bairro: "paupina",
 }
 console.log(pessoa)
+
+//  RETORNO DE UMA FUNÇÃO
+
+function calcularMedia (a,b) {
+    const media = (a + b) / 2
+    return media
+}
+const resultado = calcularMedia(7,2)
+console.log(resultado)
+
+function criarProduto (nome,preco) {
+    const produto = {
+        nome,
+        preco,
+        estoque: 1
+    }
+    return produto
+}
+//const notebook = criarProduto("Notebook lenovo ideapad 3i", 2142)
+//console.log(notebook)
+
+console.log(criarProduto("Notebook lenovo ideapad 3i", 2142))
+
+// uma função so pode retornar uma única vez
+
+function maioridade(idade) {
+    if (idade >= 18) {
+        return "Maior de idade"
+    } else {
+        return "Menor de idade"
+    }
+}
+console.log(maioridade(20))
+console.log(maioridade(13))
+
+// ESCOPO
+
+let pokemon = "charmander"
+
+function evoluir() {
+    pokemon = "chameleon"
+}
+console.log(pokemon)
+evoluir()
+console.log(pokemon)
