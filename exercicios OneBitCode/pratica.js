@@ -122,11 +122,13 @@ console.log(maioridade(13))
 
 // ESCOPO
 
-let pokemon = "charmander"
+let pokemon = "charmander" // escopo externo
 
-function evoluir() {
-    pokemon = "chameleon"
+function evoluir() {   // escopo interno
+    pokemon = "charmeleon"
 }
 console.log(pokemon)
 evoluir()
 console.log(pokemon)
+
+// variaveis escritas no escopo interno, não funcionam no escopo externo
