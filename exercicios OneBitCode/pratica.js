@@ -132,3 +132,56 @@ evoluir()
 console.log(pokemon)
 
 // variaveis escritas no escopo interno, não funcionam no escopo externo
+
+// metodos
+let pessoaa = {
+    nome: "gustavo",
+    idade: 20,
+    dizerOla () {
+        console.log("Olá mundo eu me chama " + this.nome)
+    }
+}
+console.log(pessoaa)
+pessoaa.dizerOla()
+
+// Funçoes recursivas
+// DIVIDIR
+function dividir(num){
+    console.log(num)
+    if (num % 2 === 0) {
+        dividir(num/2)
+    } else {
+        return num
+    }
+}
+dividir(16)
+
+// FATORIAL
+function fatorial(num){
+    console.log("Número: " + num)
+    if(num === 0) {
+        return 1
+    } else if (num === 1){
+        return 1
+    } else{
+        console.log(num + " * " + (num - 1))
+        return num * fatorial(num-1)
+    }
+}
+console.log(fatorial(5))
+
+// Funçoes anonimas
+
+function somar(a,b){
+    return a + b
+}
+
+let operacao = somar
+
+console.log(operacao(4,5))
+// função anonima
+operacao = function (a,b){
+    return a - b
+}
+
+console.log(operacao(4,5))
