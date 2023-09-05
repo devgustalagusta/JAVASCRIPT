@@ -185,3 +185,83 @@ operacao = function (a,b){
 }
 
 console.log(operacao(4,5))
+
+const operacao2 = function(a,b) {
+    return a - b
+}
+console.log(operacao2(2,4))
+
+
+//  High-Order function ->
+
+function calcular(a,b,operacao){  // <- função maior
+    console.log("Realizando uma operação.")
+    const resultado = operacao(a,b) // somar (3,5)
+    return resultado
+}
+
+function somar(x,y) {
+    console.log("Realizando uma soma.")
+    return x + y
+}
+
+console.log(calcular(3,5,somar))
+
+console.log(calcular(8,4, function (x,y) {
+    console.log("Realizando uma subtração.")
+    return x - y
+}))
+
+function exibirElemento(elemento, indice, array) {
+    console.log(
+        elemento,
+        indice,
+        array
+    )
+}
+
+const lista = ["Maçã", "Banana", "Laranja", "Limão"]
+
+for (let i = 0; i < lista.length; i++) {
+    exibirElemento(lista[i], i, lista)
+}
+
+lista.forEach(exibirElemento) //  <-- High-Order Function / metodo do array / pode substituir o for para deixar o codico funcional
+
+lista.forEach(function (elemento, indice, array){
+    console.log(
+        elemento,
+        indice,
+        array
+    )
+})
+
+// METODOS NO HIGH-ORDER
+
+const personagens = [
+    {nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã"},
+    {nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro"},
+    {nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro"},
+    {nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino"},
+    {nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga"},
+    {nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sarcedotisa"},
+    {nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro"},
+]
+
+// MAP    -- o map mapeia todos os elementos de um array antigo para um novo. melhor utilizado no lugar do "FOR" --
+const nomes = personagens.map(function(personagem){
+    return personagem.nome
+})
+console.log(nomes)
+
+// FILTER   -- iltra uma string especifica do array --
+const orcs = personagens.filter(function(personagem){
+    return personagem.raca === "Orc"
+})
+console.log(orcs)
+
+// REDUCE   -- serve para tranformar um arrya em outra coisa(number,string,objeto) --
+const nivelTotal = personagens.reduce(function(valorAcumulado, personagem){
+    return valorAcumulado + personagem.nivel
+},0)
+console.log(nivelTotal)
