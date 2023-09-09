@@ -254,7 +254,7 @@ const nomes = personagens.map(function(personagem){
 })
 console.log(nomes)
 
-// FILTER   -- iltra uma string especifica do array --
+// FILTER   -- filtra uma string especifica do array --
 const orcs = personagens.filter(function(personagem){
     return personagem.raca === "Orc"
 })
@@ -265,3 +265,20 @@ const nivelTotal = personagens.reduce(function(valorAcumulado, personagem){
     return valorAcumulado + personagem.nivel
 },0)
 console.log(nivelTotal)
+
+
+// SORT -- ordenar os elementos --
+const personagensOrdenados = personagens.slice().sort(function(a,b){
+    return a.nivel - b.nivel
+})
+console.log(personagens)
+console.log(personagensOrdenados)
+
+
+// OBJETOS GLOBAIS -- obejtos padrão da linguagem disponiveis para uso --
+// Object
+// Array
+// String
+// Number
+// Date
+// Math
