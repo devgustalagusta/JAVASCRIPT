@@ -1,49 +1,56 @@
-let candidatos = []
-let menu = ""
+const vagas = ""
 
+function listarVagas (){
+    const vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice){
+        textoFinal += indice + ". "
+        textoFinal += vaga.nome
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n"
+        return textoFinal
+    }, "")
+    alert(vagasEmTexto)
+}
 
-do {
-    menu = prompt(
-        "\nVagas de Emprego\n\n" +
-        "1. Listar vagas disponíveis\n" +
-        "2. Criar uma nova vaga\n" +
-        "3. Visualizar uma vaga\n" +
-        "4. Inscrever um candidato em uma vaga\n" +
-        "5. Excluir uma vaga\n" +
-        "6. Sair\n"
-    )   
-    switch (menu){
-        case "1":
-            const vagas = candidatos.map(function(vaga){
-                return vaga.nome
-            })
-            console.log(vagas)
-        break
-        case "2":
-            const novaVaga = {}
-            novaVaga.nome = prompt("Qual o nome do candidato")
-            novaVaga.descricao = prompt("Dê uma descrição sobre você")
-            novaVaga.data = prompt("Dê uma data limite para a vaga")
-            confirmacao = confirm(
-                "Deseja salvar estas informações?\n" +
-                "\nNome da vaga: " + novaVaga.nome +
-                "\nDescrição da vaga: " + novaVaga.descricao +
-                "\nData limite de entrega: " + novaVaga.data
-            )
-            if (confirmacao) {
-                candidatos.push(novaVaga)
-            }
-        break
-        case "3":
-            break
-        case "4":
-            break
-        case "5":
-            break
-        case "6":
-            alert("Saindo")
-            break
-        default:
-            alert("Opção invalida")
+function novaVaga (){
+    const nome = prompt("Informe o nome para a vaga:")
+    const descricao = prompt("Informe uma descrição para a vaga:")
+    const dataLimite = prompt("Informe uma data limite (dd/mm/aaaa0) para a vaga:")
+    const confirmacao = confirm(
+        "Deseja cria uma nova vaga para estas informaçães?\n" + "Nome: " + nome +  "\nDescrição: " + descricao + "\nData limite: " + dataLimite
+    )
+    if (confirmacao){
+        const novaVaga = {nome,descricao,dataLimite,candidatos: []}
+        vagas.push(novaVaga)
+        alert("Vaga criada.")
     }
-} while (menu !== "6" )
+}
+
+function exibirVaga (){
+    const indice = prompt("Informe o indice da vaga que deseja ixibir:")
+    const vaga = vaga[indice]
+    const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal,candidato){
+        return textoFinal + "\n - " + candidato
+    }, "")
+    alert(
+        "Vaga numero: " + indice +
+        "\nNome: " + vaga.nome +
+        "\nDescrição: " + vaga.descricao +
+        "\nData limite: " + vaga.dataLimite +
+        "\nQuantidade de candidatos: " + vaga.candidatos.length +
+        "\nCandidatos inscritos: " + candidatosEmTexto
+    )
+}
+
+function inscreverCandidato (){
+    const candidato = prompt("Informe o nome do(a) candidato(a):")
+    const indice = prompt("Informe o indice da vaga para a qual o(a) candidato(a) deseja de inscrever")
+    const vaga = vagas[indice]
+
+    const confirmacao = confirm(
+        "Deseja inscrever o candidato " + "na vaga " + indice + "?\n" +
+        "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+    )
+    if (confirmacao){
+        vaga.candidatos.push(candidato)
+        alert("Inscrição realizada.")
+    }
+}
