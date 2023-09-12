@@ -26,6 +26,10 @@ function novaVaga (){
 
 function exibirVaga (){
     const indice = prompt("Informe o indice da vaga que deseja ixibir:")
+    if (indice >= vagas.length || indice < 0){
+        alert("Indice invalido")
+        return
+    }
     const vaga = vaga[indice]
     const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal,candidato){
         return textoFinal + "\n - " + candidato
@@ -54,3 +58,54 @@ function inscreverCandidato (){
         alert("Inscrição realizada.")
     }
 }
+function excluirVaga (){
+    const indice = prompt("Informe o indice que deseja excluir:")
+    const vaga = vaga[indice]
+    const confirmacao = confirm(
+        "Tem certesa que deseja excluir essa vaga" + indice + " ?\n" +
+        "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+    )
+    if (confirmacao){
+        vagas.Splice(indice,1)
+        alert("Vaga excluida")
+    }
+}
+function exibirMenu (){
+    const opcao = prompt(
+        "Cadastro de vagas de emprego:" +
+        "\n\nEscolha uma das opções:" +
+        "\n1. Listar vagas disoniveis" +
+        "\n2. Criar uma nova vaga" +
+        "\n3. Visualizar uma vaga" +
+        "\n4. Inscrever um(a) candidato(a)" +
+        "\n5. Excluir uma vaga" +
+        "\n6. Sair"
+    )
+    return opcao
+}
+function executar (){
+    let opcao = ""
+    do {
+        opcao = exibirMenu ()
+        switch (opcao){
+            case "1":
+                listarVagas()
+                break
+            case "2":
+                novaVaga()
+                break
+            case "3":
+                exibirVaga()
+            case "4":
+                inscreverCandidato()
+                break
+            case "5":
+                excluirVaga()
+            case "6":
+                alert("Saindo.")
+            default:
+                alert("Opção invalida")
+        }
+    } while (opcao !== "6")
+}
+executar()
