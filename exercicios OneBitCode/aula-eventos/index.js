@@ -1,9 +1,9 @@
 function register(ev){
     console.log(ev)
     const sectionElement = ev.currentTarget.parentNode
-    const username = ev.currentTarget.children.username.value
-    const password = ev.currentTarget.children.username.value
-    const passwordConfirmation = ev.currentTarget.children.passwordConfirmation.username.value
+    const username = sectionElement.children.username.value
+    const password = sectionElement.children.username.value
+    const passwordConfirmation = sectionElement.children.passwordConfirmation.value
 
     if(password === passwordConfirmation){
         alert('Úsuario ' + username + ' registrado!')
@@ -15,3 +15,8 @@ function register(ev){
 const button = document.getElementById('register-button')
 
 button.addEventListener('click', register)
+
+function removeListiner (){
+    button.removeEventListener('click', register)
+    alert('Event removed')
+}
