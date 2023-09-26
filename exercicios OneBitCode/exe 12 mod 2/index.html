@@ -8,10 +8,16 @@
 </head>
 <body>
     <h1>Faça seu Cadastro</h1>
-    <form id="form">
-        <label for="name">Nome completo:</label>
-        <input type="text" name="name" id="name">
-        <button id="newtec">Adicionar nova tecnologia</button>
+    <form id="devForm">
+        <label for="fullName">Nome completo:</label>
+        <input type="text" name="fullName" id="fullName"> <br> <br>
+
+        <label for="text">Tecnologias:</label> <br>
+        <button type="button" id="addTechBtn">Adicionar</button> <br> <br> <br>
+
+        <ul id="stackInputs"></ul> <br>
+
+        <button type="submit">Cadastrar</button>
     </form>
 </body>
 </html>
