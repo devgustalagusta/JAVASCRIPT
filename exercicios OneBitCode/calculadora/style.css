@@ -1,0 +1,9 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#keys{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
