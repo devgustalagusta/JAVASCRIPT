@@ -283,3 +283,36 @@ console.log(personagensOrdenados)
 // Date
 // Math
 
+//  Desestruturação de objetos e arrays
+
+const person = {
+    name: "Luke",
+    job: "Farmer",
+    parents: ["Anakin","Padme"]
+}
+// "Forma tradicional"
+const name = person.name
+// usando a desestruturação
+const {job, parents} = person
+console.log(name,job,parents)
+// desestruturando com arrays
+const [father, mother] = parents
+console.log(father,mother)
+
+function creatUser ({name,job,parents}){
+    // Cria um número aleatorio  e pega apenas o numero inteiro -floor'corta as casas decimais'-  -math.random-'gera um numero aleatorio entre 0-1'
+    const id = Math.floor(Math.random() * 9999)
+    return{
+        id,
+        name,
+        job,
+        parents
+    }
+}
+const luke = creatUser(person)
+console.log(luke)
+
+// operador spread   -espalha os elementos de um objeto iteravel, como um array ou uma string
+const towns = ['Prontera', 'Izlude', 'Payon', 'Alberta', 'Geffen']
+console.log(...towns)
+console.log(...towns[0])
