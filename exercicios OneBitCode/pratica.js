@@ -312,7 +312,14 @@ function creatUser ({name,job,parents}){
 const luke = creatUser(person)
 console.log(luke)
 
-// operador spread   -espalha os elementos de um objeto iteravel, como um array ou uma string
+// operador spread   -espalha os elementos de um objeto iteravel, como um array ou uma string-
 const towns = ['Prontera', 'Izlude', 'Payon', 'Alberta', 'Geffen']
 console.log(...towns)
 console.log(...towns[0])
+
+// Parâmetros rest  -permite uma função receber qualquer número de parametro-
+function sum(...numbers){
+    // faz a soma de todos os valores de uma forma 'mais complicada'
+    return numbers.reduce((accum,num) => accum + num,0)
+}
+console.log(sum(2,3,5,2,34,46))
