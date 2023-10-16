@@ -323,3 +323,26 @@ function sum(...numbers){
     return numbers.reduce((accum,num) => accum + num,0)
 }
 console.log(sum(2,3,5,2,34,46))
+
+// Encadeamento opcional
+const user = {
+    name: "John Doe",
+    email: "doejohn@gmail.com",
+    friends: [{
+        name: "Mary",
+        address:{
+            street: "Some street",
+            number: 89
+        }
+    }],
+    age: 42,
+    phone: {
+        countrycode: "+55",
+        add: "22",
+        number: "0000-0000"
+    }
+}
+// o ?. faz uma verificação se existe aquela propriedade, caso não exista ele não da erro e devolde undefined
+console.log(user.friends[0].phone?.add)
+console.log(user?.brother?.length)
+console.log(user.brothers?.[5].name)
