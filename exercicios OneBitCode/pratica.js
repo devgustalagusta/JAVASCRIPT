@@ -346,3 +346,13 @@ const user = {
 console.log(user.friends[0].phone?.add)
 console.log(user?.brother?.length)
 console.log(user.brothers?.[5].name)
+
+// operador de coalescencia
+// expressao por 'curto circuito'
+const a = 0 // false
+const b = null // false
+const c = "Teste" // true
+// no || 'ou' 
+console.log(a || b || c)
+
+console.log(a ?? b ?? c)
