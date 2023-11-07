@@ -1,18 +1,21 @@
 class Product {
-    constructor(){
-        this.name = "Gustavo"
-        this.description = "alguma coisa"
-        this.price = "10"
-        this.inStock = "0"
+    constructor(name, description,price){
+        this.name = name
+        this.description = description
+        this.price = price
+        this.inStock = 0
     }
-    addToStock(some){
-        this.addInStock = 5
-        const result = inStock + addInStock
-        this.some = result
+    addToStock(quantity){
+        this.inStock += quantity
+    }
+    calculateDiscont(discount){
+        return this.price * ((100 - discount) / 100)
     }
 }
+const watch = new Product("Relógio", "...", "1000")
+watch.addToStock(50)
+const priceWithDiscount = watch.calculateDiscont(15)
 
-const produto = new Product
-const stock = addToStock(some)
-console.log(produto)
-console.log(stock)
+console.log(watch)
+console.log(priceWithDiscount)
+console.log(watch.calculateDiscont(10))

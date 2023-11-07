@@ -1,17 +1,18 @@
 class User{
-    constructor(){
-        this.fullName = "Gustavo Pessoa"
-        this.email = "Gustavo@gmail.com"
-        this.password = "12345"
+    constructor(fullName,email,password){
+        this.fullName = fullName
+        this.email = email
+        this.password = password
     }
-    login(second){
-        this.second = second
-        this.email = "Gustavo@gmail.com"
-        this.password = "1234"
+    login(email,password){
+        if(this.email === email && this.password === password){
+            console.log("Login realizado com sucesso!")
+        } else {
+            console.log("Falha ao fazer login, Email ou senha incorretos.")
+        }
     }
 }
 
-const usuario = new User
-const usuario2 = new User ("second")
-console.log(usuario)
-console.log(usuario )
+const gustavo = new User("Gustavo", "gustavo@gmail.com", "12345")
+console.log(gustavo)
+gustavo.login("gustavoemail.com, 54321")
