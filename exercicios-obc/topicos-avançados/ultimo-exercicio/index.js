@@ -8,11 +8,11 @@ function renderArticle(articleData){
     name.classList.add('articleData-name')
     name.textContent = articleData.name
 
-    const value = document.createElement('h3')
+    const value = document.createElement('p')
     value.classList.add('articleData-value')
     value.innerHTML = articleData.value
 
-    article.append(name,value)
+    article.append(articleData.id,name,value)
     document.querySelector('#article').appendChild(article)
 }
 
@@ -24,3 +24,24 @@ async function fetchArticle(){
 document.addEventListener('DOMContentLoaded', () => {
     fetchArticle()
 })
+
+// deletar uma arquivo
+document.querySelector('#formdelete').addEventListener("submit", (s) =>{
+    const id = document.querySelector('#delete').value
+    s.preventDefault()
+    fetch("http://localhost:3000/articles", {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({
+            "id": id
+        })
+    })
+    .then( response => response.json())
+    .then(data =>{
+        data
+    })
+})
+
+//saldo 

@@ -10,16 +10,24 @@
     <main> 
         <h1>Minhas Finanças</h1>
         <section id="form">
-            <h2>Nova transação</h2>
-            <label for="">Nome:</label>
+            <form action="http://localhost:3000/articles" method="post">
+                <h2>Nova transação</h2>
+            <label for="name">Nome:</label>
             <input type="text" name="name" id="name">
-            <label for="">Valor:</label>
+            <label for="value">Valor:</label>
             <input type="number" name="value" id="value">
             <button type="submit">Salvar</button>
+            </form>
         </section>
         <div>
+            <h2>Saldo: <span id="Saldo"></span></h2>
             <h2>Histórico de transações</h2>
             <section id="article"></section>
+            <section id="formdelete">
+                <label for="delete">Deletar transação:</label>
+                <input type="number" name="delete" id="delete">
+                <button id="del">Deletar</button>
+            </section>
         </div>
     </main>
     <script src="index.js"></script>

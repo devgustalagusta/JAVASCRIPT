@@ -1,9 +1,19 @@
 {
-    "articles": [
-        {
-            "id":1,
-            "name": "test",
-            "value": "00.40"
-        }
-    ]
+  "articles": [
+    {
+      "id": 1,
+      "name": "test",
+      "value": "100"
+    },
+    {
+      "name": "greg",
+      "value": "500",
+      "id": 2
+    },
+    {
+      "name": "fsd",
+      "value": "233",
+      "id": 3
+    }
+  ]
 }
