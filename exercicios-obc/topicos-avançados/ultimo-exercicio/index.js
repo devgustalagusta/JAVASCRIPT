@@ -23,6 +23,7 @@ async function fetchArticle(){
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchArticle()
+    updateSaldo()
 })
 
 // deletar uma arquivo
@@ -44,4 +45,9 @@ document.querySelector('#formdelete').addEventListener("submit", (s) =>{
     })
 })
 
-//saldo 
+//mostra o saldo da conta
+function updateSaldo(){
+    const saldoSpan = document.querySelector('#saldo')
+    const saldo = articleData.value.reduce((sum, transaction) => sum + articleData.value, 0)
+    saldoSpan.textContent = saldo
+}
