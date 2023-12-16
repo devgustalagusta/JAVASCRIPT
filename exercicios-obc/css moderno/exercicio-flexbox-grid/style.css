@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hf{
+    width: 100%;
+    background-color: darkgray;
+    height: 60px;
+    
+}
+.hf>img{
+    width: 160px;
+}
+.buttons{
+    border: 0px;
+    background: darkgrey;
+    cursor: pointer;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    flex: 1 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.main-content>div>img{
+    width: 200px;
+    height: 130px;
+    border-radius: 6%;
+}
