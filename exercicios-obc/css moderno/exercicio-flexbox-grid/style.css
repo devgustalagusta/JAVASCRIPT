@@ -7,22 +7,47 @@
 
 .hf{
     width: 100%;
-    background-color: darkgray;
-    height: 60px;
-    
+    background-color: #292929;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 8px 15px;
 }
 .hf>img{
-    width: 160px;
+    width: 180px;
 }
 .buttons{
-    border: 0px;
-    background: darkgrey;
+    display: flex;
+    gap: 15px;
+}
+.navBtn{
+    font-size: 16px;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
     cursor: pointer;
 }
+.navBtn:hover{
+    border-bottom: 2px solid black;
+    transition: 0.7s;
+}
+
+.intro{
+    padding: 40PX;
+}
+
 .container{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.item{
+    width: 200px;
 }
 
 .main-content{
