@@ -125,15 +125,44 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
-body{
-  background-image: url();
+*{
+  padding: 0px;
+  margin: 0px;
 }
 
-div.container{
-  width: 100vh;
-  display: grid;
-  text-align: center;
-  
+body{
+  background-image: url('Imagens Projeto LP-20240102T193823Z-001/Imagens Projeto LP/backgroundLp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: white;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formImg{
+  width: 200px;
+  padding-bottom: 30px;
+}
+
+.name{
+  background-color: rgba(172, 170, 170, 0.911);
+  color: red;
+  height: 36px;
+  border-radius: 3px;
+}
+
+.form{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
 }
 
 [data-bs-theme=dark] {

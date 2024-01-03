@@ -8,41 +8,99 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <form class="bg-dark">
+    <main class="container">
+        <div class="form">
+            <form class="bg-dark form">
+                <div ><img class="formImg" src="Imagens Projeto LP-20240102T193823Z-001/Imagens Projeto LP/logoOneBitDark.png" alt="logo OneBitCode"></div>
                 <p class="text-light">1 - Qual o seu nome?</p>
-
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                    <label class="text-light" for="inputPassword6" class="col-form-label">Primeiro nome:</label>
+                    <label class="text-light name" for="inputPassword6" class="col-form-label">Primeiro nome:</label>
                     </div>
                     <div class="col-auto">
-                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Digite aqui">
+                    <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Digite aqui">
                     </div>
                     <div class="col-auto">
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                    <label class="text-light" for="inputPassword6" class="col-form-label">Segundo nome:</label>
+                    <label class="text-light name" for="inputPassword6" class="col-form-label">Segundo nome:</label>
                     </div>
                     <div class="col-auto">
-                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Digite aqui">
+                    <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Digite aqui">
                     </div>
                     <div class="col-auto">
                 </div>
                 <p class="text-light">2 - Qual o seu genêro:</p>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <label class="form-check-label text-light" for="flexRadioDefault1">
                         Homen
                     </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Default checked radio
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                    <label class="form-check-label text-light" for="flexRadioDefault2">
+                        Mulher
                     </label>
+                    
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+                    <label class="form-check-label text-light" for="flexRadioDefault3">
+                        Prefiro não informar
+                    </label>    
+                </div>
+                <p class="text-light">3 - Marque os treinamentos que você fez:</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label text-light" for="flexSwitchCheckDefault">Treinamento básico de astronauta</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+                    <label class="form-check-label text-light" for="flexSwitchCheckDefault2">Treinamento físico de astronauta</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault3">
+                    <label class="form-check-label text-light" for="flexSwitchCheckDefault3">Treinamento avançado de astronauta</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault4">
+                    <label class="form-check-label text-light" for="flexSwitchCheckDefault4">Treinamento físico intenso</label>
+                </div>
+                <p class="text-light">4 - Quais você acha que são suas qualidades</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                    Proativo
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                    <label class="form-check-label text-light" for="flexCheckDefault2">
+                    Resistente
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                    <label class="form-check-label text-light" for="flexCheckDefault3">
+                    Não vomito fácil
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                    <label class="form-check-label text-light" for="flexCheckDefault4">
+                    Não temo marciano
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                    <label class="form-check-label text-light" for="flexCheckDefault5">
+                    Já vi todos os star wars
+                    </label>
+                </div>
+                <div class="btn">
+                    <button type="button" class="btn btn-outline-danger">Enviar</button>
                 </div>
             </form>
         </div>
