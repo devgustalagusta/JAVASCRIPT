@@ -16,6 +16,9 @@
     color: white;
     padding: 15px;
 }
+.navA:hover{
+    color: white;
+}
 
 .logo{
     width: 240px;
@@ -29,21 +32,78 @@
     background-image: url(../im/home/01.jpg);
     background-size: cover;
 }
-.p{
-    padding-top: 100px;
-    padding-bottom: 100px;
+.p,.p2{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    height: 0px;
+    padding-top: 200px;
+    padding-left: 90px;
+    font-size: 1.2em;
+    
 }
+.psec1,.p2{
+    padding: 10px;
+}
+.psec2,.p2sec3{
+    font-size: 2em;
+}
+.btn1,.btn2,.btn3,.btn4{
+    margin-top: 75px;
+    height: 90px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
+    color: black;
+    background-color: white;
+}
+
 .sec2{
     width: 100%;
     height: 99.5vh;
     background-repeat: no-repeat;
+    background-image: url(../im/home/03.jpg);
+    background-size: cover;
 }
+.p2sec2,.p2sec3{
+    width: 40%;
+}
+.btn2{
+    margin-top: 140px;
+    padding-top: 10px;
+    height: 50px;
+}
+
+.p2,.p3,.p4{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    height: 0px;
+    padding-top: 200px;
+    padding-left: 90px;
+    font-size: 1.2em;
+}
+
+
 .sec3{
     position: relative;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
+    background-image: url(../im/home/02.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
+.btn3{
+    margin-top: 150px;
+}
+
 .gif-container{
     width: 100%;
     height: 100%;
@@ -51,13 +111,32 @@
 }
 
 .sec4{
-    width: 100%;
-    height: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../im/home/04.jpg);
     background-repeat: no-repeat;
+    background-size: cover; 
+    
+}
+.psec4{
+    font-size: 2.5rem;
+    width: 750px;
+    font-weight: 500;
+}
+.btn4{
+    margin-top: 180px;
+    height: 80px;
+    width: 180px;
+    font-size: 18px;
 }
 
+
 .footer{
+    display: flex;
     background-color: black;
-    height: 60%;
-    width: 100%;
+    height: 105px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 48px;
 }
