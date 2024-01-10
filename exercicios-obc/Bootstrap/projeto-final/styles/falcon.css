@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+body, html{
+    height: 100%;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    margin-top: 10px;
+    margin-right: 800px;
+    
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.div1>a{
+    display: flex;
+    padding-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    justify-content: left;
+    align-items: start;
+    height: 0px;
+}
+.logoObc{
+    width: 240px;
+    height: 38.8px;
+}
+
+.div1{
+    width: 100%;
+    background-image: url(../im/falcon9/01.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+.p {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    text-align: center;
+    margin-top: 20px;margin-top: 13%;
+}
+.para1div1{
+    font-size: 5rem;
+}
+.para2div1{
+    font-size: 1.25rem;
+}
+
+.div2{
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+.div2>div>h1{
+    font-size: 5rem;
+}
+
+.div3{
+    background-image: url(../im/falcon9/02.jpg);
+    height: 100vh;
+    background-size: cover;
+}

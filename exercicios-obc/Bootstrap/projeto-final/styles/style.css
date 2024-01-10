@@ -133,10 +133,23 @@
 
 
 .footer{
+    font-size: small;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: black;
     height: 105px;
     text-align: center;
     justify-content: center;
-    padding-top: 48px;
+    padding-top: 40px;
+}
+.footer a{
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+.copyOBC{
+    margin-bottom: 10px;
+    color: grey;
+    padding-top: 8px;
 }
